@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white-paragraph: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: var(--very-light-gray);
+}
+
+.container {
+    margin: 40px 10px;
+    text-align: left;
+    padding: 20px;
+}
+
+
+.container .card {
+    padding: 50px
+}
+img {
+    margin-bottom: 25px;
+}
+h1{
+    color: var(--very-light-gray);
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+    margin-bottom: 25px; 
+    font-size: 40px; 
+}
+
+p {
+    font-size: 15px;
+    color: var(--transparent-white-paragraph);
+     margin-bottom: 25px;
+     line-height: 1.6;
+}
+button{
+    background-color: var(--very-light-gray);
+    padding: 10px 20px;
+    border: 2px solid var(--very-light-gray);
+    border-radius: 30px;
+    text-align: center;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+}
+.container .card:nth-child(1){
+    background-color: var(--bright-orange);
+    border-radius: 10px 10px 0px 0px;
+   
+}
+.container .card:nth-child(2){
+    background-color: var(--dark-cyan);
+   
+}
+.container .card:nth-child(3){
+    background-color: var(--very-dark-cyan);
+    border-radius: 0px 0px 10px 10px;
+}
+.container .card:nth-child(1) button{
+    color: var(--bright-orange);
+   
+}
+.container .card:nth-child(2) button{
+    color: var(--dark-cyan);
+   
+}
+.container .card:nth-child(3) button{
+    color: var(--very-dark-cyan);
+   
+}
+.container .card:nth-child(n) button:hover{
+    background-color: transparent;
+    color: var(--very-light-gray);
+   
+}
+.attribution{ 
+    font-size: 11px; text-align: center;
+    margin: 30px; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+@media only screen and (min-width: 768px){
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    .container .card:nth-child(1){
+       
+        border-radius: 10px 0px 0px 10px;
+       
+    }
+    .container .card:nth-child(3){
+       
+        border-radius: 0px 10px 10px 0px;
+       
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        max-width: 800px;
+        margin: auto;
+    }
+}
+@media only screen and (min-width: 1000px){
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        max-width: 1000px;
+        margin: auto;
+    }
+}
